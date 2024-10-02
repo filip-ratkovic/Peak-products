@@ -1,0 +1,19 @@
+.nav-main {
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 4px 4px 12px rgb(128, 128, 128, 0.3);
+}
+
+.nav-logo-section img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-profil-section {
+    display: flex;
+    gap: 30px;
+}
