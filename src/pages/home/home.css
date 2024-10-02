@@ -1,0 +1,21 @@
+.home-main {
+    padding: 30px;
+}
+
+.home-products-section {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-product-cont {
+    width: 250px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    box-shadow: 3px 3px 8px rgba(200, 200, 200, 0.2);
+}
+
+.home-product-cont:hover {
+    box-shadow: 6px 6px 12px rgba(200, 200, 200, 0.4);
+}
