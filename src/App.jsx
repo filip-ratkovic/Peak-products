@@ -6,7 +6,6 @@ import Login from "./pages/login/Login";
 import Registration from "./pages/registration/Registration";
 import MyProfil from "./pages/myProfil/MyProfil";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
-import Nav from "./components/nav/Nav";
 
 const App = () => {
   return (

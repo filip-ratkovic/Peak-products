@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
     box-shadow: 4px 4px 12px rgb(128, 128, 128, 0.3);
 }
 
@@ -16,4 +16,41 @@
 .nav-profil-section {
     display: flex;
     gap: 30px;
+}
+
+.nav-profil-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-profil-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+.nav-profil-dropdown:hover .nav-profil-menu {
+    visibility: visible;
+
+}
+
+.nav-profil-menu {
+    visibility: hidden;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 150px;
+    box-shadow: 4px 4px 12px rgba(128, 128, 128, 0.2);
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 10px;
+}
+.nav-profil-menu p {
+    padding: 20px 10px 0px 10px;
+    vertical-align: baseline;
+}
+
+.nav-profil-menu p:hover {
+    background-color: rgba(128, 128, 128, 0.3);
 }
