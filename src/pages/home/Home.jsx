@@ -12,6 +12,9 @@ const Home = () => {
   const [pageNum, setPageNum] = useState(0)
   const [searchInput, setSearchInput] = useState('');
   const searchState = useSelector((state) => state.search);
+  const authState = useSelector((state) => state.auth);
+  const accessToken = authState?.token
+
 
 
 
@@ -62,6 +65,12 @@ const Home = () => {
   useEffect(() => {
     fetchData()
   }, []);
+
+    if(accessToken) {
+    } else {
+      navigate("/login")
+
+    }
 
   return (
     <Layout>

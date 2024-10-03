@@ -54,3 +54,12 @@
 .nav-profil-menu p:hover {
     background-color: rgba(128, 128, 128, 0.3);
 }
+
+.nav-profil-login {
+    display: flex;
+    align-items: center;
+}
+
+.nav-profil-login p {
+    cursor: pointer;
+}
