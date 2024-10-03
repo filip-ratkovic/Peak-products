@@ -91,10 +91,10 @@ const Home = () => {
                   style={{ width: "100px" }}
                 />
                 <button
-                  style={{ cursor: "pointer" }}
+                className="home-button"
                   onClick={() => navigate(`/product/${product.id}`)}
                 >
-                  Learn more /
+                  Learn more
                 </button>
               </div>
             );

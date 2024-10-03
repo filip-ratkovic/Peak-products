@@ -27,3 +27,15 @@
     gap: 40px;
     margin-block: 20px;
 }
+
+.home-button {
+    outline: none;
+    border: none;
+    padding: 5px 20px;
+    font-size: 14px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-block: 10px;
+    color: blue;
+}
