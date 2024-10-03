@@ -19,3 +19,11 @@
 .home-product-cont:hover {
     box-shadow: 6px 6px 12px rgba(200, 200, 200, 0.4);
 }
+
+.home-pagination-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-block: 20px;
+}
