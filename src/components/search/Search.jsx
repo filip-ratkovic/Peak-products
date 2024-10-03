@@ -2,14 +2,26 @@ import React, { useState } from 'react'
 import "./search.css"
 import { InputAdornment, TextField } from '@mui/material'
 import SearchIcon from "@mui/icons-material/Search";
+import { store } from '../../store/store';
+import { searchSlice } from '../../store/searchSlice';
 
 
 const Search = () => {
     const [input, setInput] = useState('')
 
+
     const handleSearch = (e) => {
         setInput(e.target.value);
       };
+
+    const submitSearch = () => {
+      console.log(input)
+      store.dispatch(
+        searchSlice.actions.setData({
+          searchInput: input
+        })
+      );
+    }
   return (
     <main className='search-main'>
          <TextField
@@ -18,7 +30,7 @@ const Search = () => {
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="start">
-                      <SearchIcon />
+                      <SearchIcon onClick ={submitSearch}/>
                     </InputAdornment>
                   ),
                 }}

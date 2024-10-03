@@ -3,13 +3,17 @@ import Layout from "../../containers/Layout";
 
 import "./home.css";
 import Search from "../../components/search/Search";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import Pagination from "../../components/pagination/Pagination";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [allProducts, setAllProducts] = useState("");
   const [pageNum, setPageNum] = useState(0)
   const [searchInput, setSearchInput] = useState('');
+  const searchState = useSelector((state) => state.search);
+
+
 
   const navigate = useNavigate();
 
@@ -35,8 +39,8 @@ const Home = () => {
     setSearchInput(e.target.value);
   };
 
-  const fatchSearchData = () => {
-    fetch(`https://dummyjson.com/products/search?q=${searchInput}`)
+  const fetchSearchData = () => {
+    fetch(`https://dummyjson.com/products/search?q=${searchState.searchInput}`)
     .then((res) => res.json())
     .then((data) => {
       setAllProducts(data);
@@ -48,8 +52,13 @@ const Home = () => {
     .then((res) => res.json())
     .then((data) => {
       setAllProducts(data);
+
     });
   }
+  useEffect(() => {
+    fetchSearchData()
+  }, [searchState]);
+
   useEffect(() => {
     fetchData()
   }, []);
@@ -74,7 +83,7 @@ const Home = () => {
                 />
                 <button
                   style={{ cursor: "pointer" }}
-                  onClick={() => navigate(`/products/${product.title}`)}
+                  onClick={() => navigate(`/product/${product.id}`)}
                 >
                   Learn more /
                 </button>
